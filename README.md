@@ -3,7 +3,8 @@
 Build a To Do List App similar to this: https://to-do-test-app.firebaseapp.com/.
 
 * Total number of uncompleted tasks should display at the bottom
-*
+* User should be able to remove tasks from the list.
+* User should be able to mark tasks completed.
 
 No backend required (Data does not need to persist).
 
