@@ -1,2 +1,11 @@
-# Intern-test
-Create a simple To Do List web app with React and Mobx.
+# Internship at The Dotcom test
+
+Build a To Do List App similar to this: https://to-do-test-app.firebaseapp.com/.
+
+No backend required (Data does not need to persist).
+
+Utilize React and Mobx (bonus points for Typescript).
+
+Push to a github repo and deploy with a tool of your choice. We recommend Netlify or Firebase.
+
+Commit early and often.  We want to see your process.
