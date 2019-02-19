@@ -2,6 +2,9 @@
 
 Build a To Do List App similar to this: https://to-do-test-app.firebaseapp.com/.
 
+* Total number of uncompleted tasks should display at the bottom
+*
+
 No backend required (Data does not need to persist).
 
 Utilize React and Mobx (bonus points for Typescript).
