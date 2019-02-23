@@ -1,0 +1,58 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Todo App</title>
+	<style type="text/css">
+		.todo-list-item{
+			position: relative;
+			margin: 0.5rem 0;
+		}
+		.todo-list-item:not(:last-child){
+			border-bottom: 1px dotted #ededed;
+		}
+		.todo-list-item .todo-list-title{
+			margin: 0 10px 0 25px;
+		}
+		.todo-list-item .round-checkbox{
+			position: absolute;
+			left: 0;
+			top: 2px;
+		}
+		.todo-list-item .round-checkbox.checked + .todo-list-title{
+			color: #d9d9d9;
+			text-decoration: line-through;
+			transition: all .3s;
+		}
+		.todo-list-item .destroy{
+			position: absolute;
+			right: 0;
+			top: 4px;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+	<div id = "root">
+		<div class="card todo-list-container">
+			<form class="todo-list-form">
+				<section class="header-section">
+					<h1 class="text-center white-text">
+						Things To Do
+					</h1>
+				</section>
+				<section class="content-section">
+					<input type="text" class="todo-list-input" placeholder="What needs to be done?" value>
+				</section>
+			</form>
+			<ul class="todo-items"></ul>
+			<hr>
+			<span class="text-italic tasks-left">
+				"Tasks left: "
+				"0"
+			</span>
+		</div>
+	</div>
+	<script type="text/javascript"></script>
+</body>
+</html>
