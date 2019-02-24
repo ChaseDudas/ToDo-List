@@ -1,6 +1,5 @@
 import React, { useState, Fragment } from 'react'
 
-
 type FormElem = React.FormEvent<HTMLFormElement>
 
 interface ITodo {
@@ -85,4 +84,5 @@ function App(): JSX.Element {
     </Fragment>
   )
 }
+
 export default App
