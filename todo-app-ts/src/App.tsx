@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from 'react'
 
+
 type FormElem = React.FormEvent<HTMLFormElement>
 
 interface ITodo {
@@ -32,6 +33,19 @@ function App(): JSX.Element {
     const newTodos: ITodo[] = todos
     newTodos.splice(index, 1)
     setTodos(newTodos)
+    return
+  }
+
+  const findTodo = (): number => {
+    var totalTasks = 0
+    for (var i = 0; i < todos.length; ++i) 
+    {
+      if(todos[i].complete == false)
+      {
+        totalTasks++
+      }
+    }
+    return totalTasks
   }
 
   return (
@@ -67,7 +81,7 @@ function App(): JSX.Element {
         ))}
       </section>
       <hr></hr>
-      <span> Tasks left {todos.length} </span>
+      <span> Tasks left {findTodo()} </span>
     </Fragment>
   )
 }
