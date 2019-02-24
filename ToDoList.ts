@@ -1,33 +1,30 @@
-interface Todo
-{
-	name:string;
-	description:string;
-	completed: boolean;
-}
+class toDoItem{
+	item: string;
+	status: boolean;
 
-class ToDo implements Todo
-{
-	constructor(public name: string, 
-       			public description: string, 
-                public completed: boolean)
+	constructor(item: string, status: boolean)
 	{
-
+		this.item = item;
+		this.status = status;
 	}
 }
 
-class ToDoList
-{	
-	public static listOfTodos: Todo[]= new Array;
+class toDoList{
+	public static currentToDoList: toDoItem[] = new Array;
 
-    createTodoItem(name:string,description:string):number 
-    {
-        let newItem = new ToDo(name,description, false);
-        let totalCount: number = ToDoList.listOfTodos.push(newItem);
-        return totalCount;
-    }
+	createToDoItem(item:string){
+		let newtoDoItem = new toDoItem(item, false);
+		let allToDoItems: number = toDoList.currentToDoList.push(newtoDoItem);
+		return allToDoItems;
+	}
 
-    getTodoItems():Todo[]
-    {
-        return ToDoList.listOfTodos;
-    }
+	getToDoIems():toDoItem[]{
+		return toDoList.currentToDoList;
+	}
 }
+
+let newToDo : string = (document.getElementById("myTodoItem") as HTMLInputElement).value; 
+
+
+let newItem = new toDoItem(newToDo, false);
+console.log(newItem);
