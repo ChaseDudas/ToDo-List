@@ -23,8 +23,12 @@ class toDoList{
 	}
 }
 
-let newToDo : string = (document.getElementById("myTodoItem") as HTMLInputElement).value; 
-
+let newToDo : string = (document.getElementById("myTodoItem") as HTMLInputElement).value;
+if(newToDo.length == 0)
+{
+	newToDo = "Nothing";
+} 
 
 let newItem = new toDoItem(newToDo, false);
 console.log(newItem);
+console.log(newToDo);

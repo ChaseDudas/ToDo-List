@@ -20,5 +20,9 @@ var toDoList = /** @class */ (function () {
     return toDoList;
 }());
 var newToDo = document.getElementById("myTodoItem").value;
+if (newToDo.length == 0) {
+    newToDo = "Nothing";
+}
 var newItem = new toDoItem(newToDo, false);
 console.log(newItem);
+console.log(newToDo);
