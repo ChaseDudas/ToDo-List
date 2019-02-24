@@ -8,6 +8,11 @@ interface ITodo
   complete: boolean
 }
 
+interface MyToDo
+{
+
+}
+
 function App(): JSX.Element {
   const [value, setValue] = useState<string>('')
   const [todos, setTodos] = useState<ITodo[]>([])
@@ -37,22 +42,20 @@ function App(): JSX.Element {
 
   return (
     <Fragment>
-      <h1>Todo List</h1>
+      <h1>Things To Do</h1>
       <form onSubmit={handleSubmit}>
         <input
           type='text'
           value={value}
           onChange={e => setValue(e.target.value)}
+          placeholder = "What needs to be done?"
           required
         />
-        <button type='submit'>Add Todo</button>
       </form>
       <section>
         {todos.map((todo: ITodo, index: number) => (
           <div key={index} style={{ display: 'flex' }}>
-            <div
-              style={{ textDecoration: todo.complete ? 'line-through' : '' }}
-            >
+            <div style={{ textDecoration: todo.complete ? 'line-through' : '' }} >
               {todo.text}
             </div>
             <button type='button' onClick={() => completeTodo(index)}>
@@ -62,6 +65,7 @@ function App(): JSX.Element {
           </div>
         ))}
       </section>
+      <h2>Tasks left: {todos.length}</h2>
     </Fragment>
   )
 }
