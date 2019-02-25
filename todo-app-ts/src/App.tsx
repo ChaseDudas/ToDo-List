@@ -98,7 +98,7 @@ function App(): JSX.Element {
                 value = {randomString()}
                 onChange={v => setDel(v.target.value)}
                 onClick ={() => removeTodo(index)}
-                className = "todo-list-delete" >
+                className = "todo-list-delete"  >
             </input>
           </div>
         ))}
