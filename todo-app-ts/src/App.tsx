@@ -1,4 +1,6 @@
 import React, { useState, Fragment } from 'react'
+import './App.css'
+
 
 type FormElem = React.FormEvent<HTMLFormElement>
 
@@ -10,6 +12,7 @@ interface ITodo {
 function App(): JSX.Element {
   const [value, setValue] = useState<string>('')
   const [trigger, setTrigger] = useState<string>('')
+  const [del, setDel] = useState<string>('')
   const [todos, setTodos] = useState<ITodo[]>([])
 
   const handleSubmit = (e: FormElem): void => {
@@ -19,7 +22,12 @@ function App(): JSX.Element {
   }
 
   const triggerUpdate = (c: FormElem): void => {
-    c.preventDefault
+    c.preventDefault()
+    setValue('')
+  }
+
+  const delUpdate = (v: FormElem): void => {
+    v.preventDefault()
     setValue('')
   }
 
@@ -55,39 +63,49 @@ function App(): JSX.Element {
 
   return (
     <Fragment>
-      <h1>Things To Do</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type='text'
-          value={value}
-          onChange={e => setValue(e.target.value)}
-          placeholder = "What needs to be done?"
-          required
-        />
+    <div className = "card todo-list-container">
+      <form onSubmit={handleSubmit} className = "todo-list-form">
+        <section className = "header-section"> 
+              <h1 className = "text-center white-text">Things To Do</h1>
+        </section>
+        <section className = "content-section">
+          <input
+            type='text'
+            value={value}
+            onChange={e => setValue(e.target.value)}
+            placeholder = "What needs to be done?"
+            required
+            className = "todo-list-input"
+            >
+          </input>
+        </section>
       </form>
-      <section>
+      <section className = "todo-items">
         {todos.map((todo: ITodo, index: number) => (
           <div key={index} style={{ display: 'flex' }}>
             <input
                 type='checkbox'
                 value = {index}
                 onChange={c => setValue(c.target.value)}
-                onClick ={() => completeTodo(index)} >
+                onClick ={() => completeTodo(index)} 
+                className = "todo-list-complete">
             </input>
-            <div style={{ textDecoration: todo.complete ? 'line-through' : '' }}>
+            <div style={{ textDecoration: todo.complete ? 'line-through' : '' }} className = "todo-list">
                 {todo.text}
             </div>
             <input
                 type='checkbox'
                 value = {index}
-                onChange={c => setValue(c.target.value)}
+                onChange={v => setValue(v.target.value)}
                 onClick ={() => removeTodo(index)}
-            />
+                className = "todo-list-delete" >
+            </input>
           </div>
         ))}
       </section>
       <hr></hr>
-      <span> Tasks left {findTodo()} </span>
+      <span className = "text-italic tasks-left"> Tasks left: {findTodo()} </span>
+      </div>
     </Fragment>
   )
 }
