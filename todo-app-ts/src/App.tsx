@@ -9,11 +9,17 @@ interface ITodo {
 
 function App(): JSX.Element {
   const [value, setValue] = useState<string>('')
+  const [trigger, setTrigger] = useState<string>('')
   const [todos, setTodos] = useState<ITodo[]>([])
 
   const handleSubmit = (e: FormElem): void => {
     e.preventDefault()
     addTodo(value)
+    setValue('')
+  }
+
+  const triggerUpdate = (c: FormElem): void => {
+    c.preventDefault
     setValue('')
   }
 
@@ -63,19 +69,20 @@ function App(): JSX.Element {
         {todos.map((todo: ITodo, index: number) => (
           <div key={index} style={{ display: 'flex' }}>
             <input
-            type='checkbox'
-            onChange={() => completeTodo(index)} >
+                type='checkbox'
+                value = {index}
+                onChange={c => setValue(c.target.value)}
+                onClick ={() => completeTodo(index)} >
             </input>
-            <div
-              style={{ textDecoration: todo.complete ? 'line-through' : '' }}
-            >
-              {todo.text}
+            <div style={{ textDecoration: todo.complete ? 'line-through' : '' }}>
+                {todo.text}
             </div>
             <input
-            type='checkbox'
-            onChange={() => removeTodo(index)}
+                type='checkbox'
+                value = {index}
+                onChange={c => setValue(c.target.value)}
+                onClick ={() => removeTodo(index)}
             />
-            
           </div>
         ))}
       </section>
