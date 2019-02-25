@@ -96,31 +96,29 @@
    margin: 0 50px 0 25px;
 
 }
-.todo-list-complete::before{
+.todo-list-complete:before{
   content: "";
-         display: block;
-         width: 16px;
-         height: 16px;
-         top: 0;
-         left: 0;
-         border: 2px solid #555555;
-         border-radius: 3px;
-         background-color: white;
+  display: block;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid #555555;
+  border-radius: 3px;
+  background-color: white;
 }
 
-.todo-list-delete::before{
+.todo-list-delete:before{
   content: "";
-         display: block;
-         width: 16px;
-         height: 16px;
-         top: 0;
-         left: 0;
-         border: 2px solid #555555;
-         border-radius: 3px;
-         background-color: white;
+  display: block;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid darkred;
+  border-radius: 3px;
+  background-color: white;
 }
-
-
 
 
 body{
@@ -159,6 +157,7 @@ hr, form{
     /* MAIN */
 .todo-list-container{
       margin-top: 130px;
+      margin-bottom: 130px;
       position: relative;
     }
 

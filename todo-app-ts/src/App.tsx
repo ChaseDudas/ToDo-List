@@ -90,7 +90,7 @@ function App(): JSX.Element {
                 onClick ={() => completeTodo(index)} 
                 className = "todo-list-complete" >
             </input>
-            <div style={{ textDecoration: todo.complete ? 'line-through' : '' }} className = "todo-list-item">
+            <div style={{ textDecoration: todo.complete ? 'line-through' : ''}} className = "todo-list-item">
                 {todo.text}
             </div>
             <input
