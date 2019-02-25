@@ -74,35 +74,26 @@
 .todo-list-container .todo-list-input::placeholder{
       font-style: italic;
       color: #ccc;
-      font-size: 18px;
+      font-size: 20px;
+    }
+.todo-list-container .todo-list-input{
+      font-style: italic;
+      color: black;
+      font-size: 20px;
     }
 
 .todo-list-item{
       position: relative;
       margin: 0.5rem 0;
+      font-style: italic;
+      font-size: 20px;
+     
     }
-    .todo-list-item:not(:last-child){
-      border-bottom: 1px dotted #ededed;
-    }
-    .todo-list-item .todo-list-title{
-      margin: 0 10px 0 25px;
-    }
-    .todo-list-item .round-checkbox{
-      position: absolute;
-      left: 0;
-      top: 2px;
-    }
-    .todo-list-item .round-checkbox.checked + .todo-list-title{
-      color: #d9d9d9;
-      text-decoration: line-through;
-      transition: all .3s;
-    }
-.todo-list-destroy{
-      position: absolute;
-      right: 0;
-      top: 4px;
-      font-size: 14px;
-    }
+.todo-items{
+   border-bottom: 1px dotted #ededed;
+   margin: 0 10px 0 25px;
+}
+
 
 body{
         background: #FFFFE0;

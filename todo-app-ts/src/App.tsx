@@ -3,6 +3,7 @@ import './App.css'
 
 
 type FormElem = React.FormEvent<HTMLFormElement>
+var randomString = require('random-string');
 
 interface ITodo {
   text: string
@@ -23,12 +24,12 @@ function App(): JSX.Element {
 
   const triggerUpdate = (c: FormElem): void => {
     c.preventDefault()
-    setValue('')
+    setTrigger('')
   }
 
   const delUpdate = (v: FormElem): void => {
     v.preventDefault()
-    setValue('')
+    setDel('')
   }
 
   const addTodo = (text: string): void => {
@@ -45,8 +46,7 @@ function App(): JSX.Element {
   const removeTodo = (index: number): void => {
     const newTodos: ITodo[] = todos
     newTodos.splice(index, 1)
-    setTodos(newTodos)
-    return
+    setTodos(newTodos)    
   }
 
   const findTodo = (): number => {
@@ -85,18 +85,18 @@ function App(): JSX.Element {
           <div key={index} style={{ display: 'flex' }}>
             <input
                 type='checkbox'
-                value = {index}
-                onChange={c => setValue(c.target.value)}
+                value = {randomString()}
+                onChange={c => setTrigger(c.target.value)}
                 onClick ={() => completeTodo(index)} 
-                className = "todo-list-complete">
+                className = "todo-list-complete" >
             </input>
-            <div style={{ textDecoration: todo.complete ? 'line-through' : '' }} className = "todo-list">
+            <div style={{ textDecoration: todo.complete ? 'line-through' : '' }} className = "todo-list-item">
                 {todo.text}
             </div>
             <input
                 type='checkbox'
-                value = {index}
-                onChange={v => setValue(v.target.value)}
+                value = {randomString()}
+                onChange={v => setDel(v.target.value)}
                 onClick ={() => removeTodo(index)}
                 className = "todo-list-delete" >
             </input>
