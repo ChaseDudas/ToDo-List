@@ -113,7 +113,9 @@ function App(): JSX.Element {
             
             <div style={{ textDecoration: todo.complete ? 'line-through' : ''}} className = "todo-list-item">
               <div style={{ color: todo.important ? 'red' : ''}} className = "todo-list-mark-important">
-                  {todo.text}
+                <div style={{ opacity: todo.complete ? 0.3 : 1}} className = "todo-list-mark-complete">
+                    {todo.text}
+                </div>
               </div>
             </div>
             <input
