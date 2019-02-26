@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from 'react'
+import { Provider, observer, inject } from 'mobx-react';
 import './App.css'
 
 
