@@ -69,6 +69,18 @@ function App(): JSX.Element {
     return totalTasks
   }
 
+  const findImportant = (): number => {
+    var totalImp = 0;
+    for (var i = 0; i < todos.length; ++i) 
+    {
+      if(todos[i].important == true && todos[i].complete == false)
+      {
+        totalImp++
+      }
+    }
+    return totalImp
+  }
+
   return (
     <Fragment>
     <div className = "card todo-list-container">
@@ -123,6 +135,8 @@ function App(): JSX.Element {
       </section>
       <hr></hr>
       <span className = "text-italic tasks-left"> Tasks left: {findTodo()} </span>
+      <div/>
+      <span className = "text-italic imp-tasks-left"> Important tasks left: {findImportant()} </span>
       </div>
     </Fragment>
   )
