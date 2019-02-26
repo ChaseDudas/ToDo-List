@@ -104,7 +104,7 @@
   top: 0;
   left: 0;
   border: 2px solid #555555;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: white;
 }
 
@@ -116,7 +116,7 @@
   top: 0;
   left: 0;
   border: 2px solid darkblue;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: white;
 }
 
@@ -128,8 +128,8 @@
   top: 0;
   left: 0;
   border: 2px solid darkred;
-  border-radius: 3px;
-  background-color: white;
+  border-radius: 5px;
+  background-color: white;  
 }
 
 body{
