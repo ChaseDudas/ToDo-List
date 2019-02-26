@@ -108,6 +108,18 @@
   background-color: white;
 }
 
+.todo-list-important:before{
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid darkblue;
+  border-radius: 3px;
+  background-color: white;
+}
+
 .todo-list-delete:before{
   content: "";
   display: block;

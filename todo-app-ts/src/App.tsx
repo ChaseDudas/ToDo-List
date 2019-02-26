@@ -9,6 +9,7 @@ var randomString = require('random-string');
 interface ITodo {
   text: string
   complete: boolean
+  important: boolean
 }
 
 function App(): JSX.Element {
@@ -34,13 +35,19 @@ function App(): JSX.Element {
   }
 
   const addTodo = (text: string): void => {
-    const newTodos: ITodo[] = [...todos, { text, complete: false }]
+    const newTodos: ITodo[] = [...todos, { text, complete: false, important: false }]
     setTodos(newTodos)
   }
 
   const completeTodo = (index: number): void => {
     const newTodos: ITodo[] = todos
     newTodos[index].complete = !newTodos[index].complete
+    setTodos(newTodos)
+  }
+
+  const importantTodo = (index: number): void => {
+    const newTodos: ITodo[] = todos
+    newTodos[index].important = !newTodos[index].important
     setTodos(newTodos)
   }
 
@@ -91,9 +98,18 @@ function App(): JSX.Element {
                 onClick ={() => completeTodo(index)} 
                 className = "todo-list-complete" >
             </input>
-            <div style={{ textDecoration: todo.complete ? 'line-through' : ''}} className = "todo-list-item">
-                {todo.text}
+            <div style={{ color: todo.important ? 'red' : ''}} className = "todo-list-mark-important">
+              <div style={{ textDecoration: todo.complete ? 'line-through' : ''}} className = "todo-list-item">
+                  {todo.text}
+              </div>
             </div>
+            <input
+                type='checkbox'
+                value = {randomString()}
+                onChange={v => setDel(v.target.value)}
+                onClick ={() => importantTodo(index)}
+                className = "todo-list-important"  >
+            </input>
             <input
                 type='checkbox'
                 value = {randomString()}
