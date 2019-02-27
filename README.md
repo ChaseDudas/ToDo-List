@@ -3,7 +3,6 @@
 ## My App : https://todo-list-chase.netlify.com/
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4fb9d6d5-7ea7-478d-94dd-7cb58bf5f17f/deploy-status)](https://app.netlify.com/sites/todo-list-chase/deploys)
 
-##Demo 
 ![](Demo.gif)
 
 Build a To Do List App similar to this: https://to-do-test-app.firebaseapp.com/.
