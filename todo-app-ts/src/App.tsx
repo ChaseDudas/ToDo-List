@@ -107,7 +107,8 @@ function App(): JSX.Element {
                 value = {randomString()}
                 onChange={c => setTrigger(c.target.value)}
                 onClick ={() => completeTodo(index)} 
-                className = "todo-list-complete" >
+                className = "todo-list-complete" 
+                style={{ opacity: todo.complete ? 0.3 : 1}} >
             </input>
             
             <div style={{ textDecoration: todo.complete ? 'line-through' : ''}} className = "todo-list-item">
@@ -122,7 +123,8 @@ function App(): JSX.Element {
                 value = {randomString()}
                 onChange={v => setDel(v.target.value)}
                 onClick ={() => importantTodo(index)}
-                className = "todo-list-important"  >
+                className = "todo-list-important"  
+                style={{ opacity: todo.important ? 0.3 : 1}}>
             </input>
             <input
                 type='checkbox'
