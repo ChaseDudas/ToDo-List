@@ -30,11 +30,9 @@
     }
 .todo-list-container .todo-list-input{
       box-sizing: border-box;
-      margin: 0;
       display: inline-block;
       padding: 4px 11px;
       width: 100%;
-      outline: 0;
       height: 32px;
       line-height: 1.5;
       color: rgba(0, 0, 0, 0.65);
@@ -113,7 +111,7 @@
   }
 
 body{
-        background: #FFFFE0;
+        background: #f9f9f9;
     }
 ul, ol{
       list-style-type: none;
