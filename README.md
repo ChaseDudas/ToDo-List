@@ -21,5 +21,5 @@ Commit early and often.  We want to see your process.
 
 Paste the deployed url into the description and readme.md of your repo.  Email us the link to your repo (Please ensure it's public).
 
-##### Monday Mood
+##### Monday Mood-
 <img src="http://www.quickmeme.com/img/2b/2be641a150f63df0d0356ecd503bfea915f93c1172a2224ff60c95b113adf0b4.jpg" width="whatever" height=200px>
