@@ -132,7 +132,7 @@ function App(): JSX.Element {
                 onChange={v => setDel(v.target.value)}
                 onClick ={() => removeTodo(index)}
                 className = "todo-list-delete" 
-                style = {{marginLeft: 10 }} >
+                style = {{marginLeft: 10 }}  >
             </input>
           </div>
         ))}
