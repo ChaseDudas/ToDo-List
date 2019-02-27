@@ -105,7 +105,7 @@
   height: 16px;
   top: 0;
   left: 0;
-  border: 2px solid #555555;
+  border: 2.5px solid darkgreen;
   border-radius: 5px;
   background-color: white;
 }
@@ -117,7 +117,7 @@
   height: 16px;
   top: 0;
   left: 0;
-  border: 2px solid darkblue;
+  border: 2.5px solid darkblue;
   border-radius: 5px;
   background-color: white;
 }
@@ -129,10 +129,18 @@
   height: 16px;
   top: 0;
   left: 0;
-  border: 2px solid darkred;
+  border: 2.5px solid darkred;
   border-radius: 5px;
   background-color: white;  
 }
+
+.todo-list-important:checked{
+  opacity: 0.3
+  }
+
+  .todo-list-complete:checked{
+    opacity: 0.3
+  }
 
 body{
         background: #FFFFE0;
