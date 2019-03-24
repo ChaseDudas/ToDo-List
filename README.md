@@ -18,7 +18,8 @@ The ToDo-List app was created originally as an intern test. The app does not con
 2. Follow the link below to an already hosted version 
     - https://todo-list-chase.netlify.com/
 
-### Originaly created as an Internship at The Dotcom test
+
+## Internship at The Dotcom test
 Build a To Do List App similar to this: https://to-do-test-app.firebaseapp.com/.
 
 - [X] Total number of uncompleted tasks should display at the bottom
