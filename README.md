@@ -2,7 +2,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4fb9d6d5-7ea7-478d-94dd-7cb58bf5f17f/deploy-status)](https://app.netlify.com/sites/todo-list-chase/deploys)
 
 ## Description
-The ToDo-List app was created originally as an intern test. The app does not contain a backend so any tasks created by the user will be deleeted upon refresh/exit. It was created using React and Typescript. This was my first time completing a project of this sort. From this app I gained an understanding about both React and Typescript and how powerfull both of these resources are. 
+The ToDo-List app was created originally as an intern test. The app does not contain a backend so any tasks created by the user will be deleeted upon refresh/exit. It was created using React and Typescript. From this app I gained an understanding about both React and Typescript and how powerfull both of these resources are. 
 
 
 ![](Demo.gif)
